@@ -133,9 +133,8 @@ class _ScreenFlyerMakerState extends State<ScreenFlyerMaker> {
                 bgImagePath: "$extractedPath/${_templatePage!.bgImage}",
                 widgetWidth: _imageWidth ?? 1000,
                 widgetHeight: _imageHeight ?? 1400,
-                exportWidth: 1000,
-                // original template width
-                exportHeight: 1400, // original template height
+                exportWidth: 1000,   // original template width
+                exportHeight: 1400,  // original template height
               );
             },
           ),
@@ -184,21 +183,19 @@ class _ScreenFlyerMakerState extends State<ScreenFlyerMaker> {
                         ),
                       ),
                       ...stickerPoints.values.map(
-                        (sticker) => RepaintBoundary(
-                          child: DraggableStickerView(
-                            key: Key(sticker.uniqueId ?? ''),
-                            index: sticker.uniqueId ?? '',
-                            sticker: sticker,
-                            onEdit: (key, sticker) {},
-                            onDelete: (key) => setState(() => stickerPoints.remove(key)),
-                            onUpdate: (key, sticker) => setState(() => stickerPoints[key] = sticker!),
-                            onSelection: (key, sticker) {
-                              if (_selectedStickerId != key) {
-                                setState(() => _selectSticker(key, sticker!));
-                              }
-                            },
-                            child: _buildStickerChild(sticker),
-                          ),
+                        (sticker) => DraggableStickerView(
+                          key: Key(sticker.uniqueId ?? ''),
+                          index: sticker.uniqueId ?? '',
+                          sticker: sticker,
+                          onEdit: (key, sticker) {},
+                          onDelete: (key) => setState(() => stickerPoints.remove(key)),
+                          onUpdate: (key, sticker) => setState(() => stickerPoints[key] = sticker!),
+                          onSelection: (key, sticker) {
+                            if (_selectedStickerId != key) {
+                              setState(() => _selectSticker(key, sticker!));
+                            }
+                          },
+                          child: _buildStickerChild(sticker),
                         ),
                       ),
                     ],
