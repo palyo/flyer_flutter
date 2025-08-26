@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flyer/presentation/theme/colors.dart';
 
 import 'presentation/screens/screen_flyer_maker.dart';
+import 'presentation/screens/screen_flyer_maker_bloc.dart';
 
 void main() {
   runApp(const MainApp());
@@ -50,7 +51,7 @@ class MainApp extends StatelessWidget {
         ),
       ),
       themeMode: ThemeMode.light,
-      home: ScreenFlyerMaker(),
+      home: ScreenFlyerMakerBloc(),
     );
   }
 }

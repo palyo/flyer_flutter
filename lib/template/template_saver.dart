@@ -6,11 +6,6 @@ import 'package:gallery_saver_plus/gallery_saver.dart';
 
 import '../flyer.dart';
 
-import 'dart:typed_data';
-import 'dart:ui' as ui;
-import 'dart:io';
-import 'package:flutter/material.dart';
-
 /// Export the current flyer to PNG and save in gallery.
 /// [stickerPoints] → live user-edited stickers (with size, pos, etc.)
 /// [bgImagePath]   → background file path

@@ -21,6 +21,8 @@ dependencies:
   dio: ^5.9.0
   archive: ^4.0.7
   gallery_saver_plus: ^3.2.8
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
 
 dev_dependencies:
   flutter_test:
